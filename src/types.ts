@@ -10,9 +10,8 @@ export interface userInfo {
   myBrief?: string; // 简介
   addrSchool?: {
     id: string,
-    campus: string,
-    area: string,
-    building: string,
+    campus: number,
+    addr: string,
   }; // 校址
   addrCustom?: string; // 自定义地址
 }

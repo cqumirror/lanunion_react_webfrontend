@@ -13,9 +13,8 @@ export interface ApiUserInfo {
   qqnumber: number,
   addr_school: {
     id: string,
-    campus: string,
-    area: string,
-    building: string
+    campus: number,
+    addr: string
   },
   addr_custom: string,
   score: string,

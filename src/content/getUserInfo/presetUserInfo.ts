@@ -30,19 +30,7 @@ export const invalidUserInfo = {
 // 未找到用户信息
 export const undefinedUserInfo = {
   isLogin: false,
-  userId: "未找到用户信息",
   name: "未找到用户信息",
-  email: "未找到用户信息",
-  qqnumber: "未找到用户信息",
   identity: [Identity.None],
   state: UserLoginState.Undifined,
-  score: "未找到用户信息",
-  myBrief: "未找到用户信息",
-  addrSchool: {
-    id: "未找到用户信息",
-    campus: "未找到用户信息",
-    area: "未找到用户信息",
-    building: "未找到用户信息",
-  },
-  addrCustom: "未找到用户信息",
 };

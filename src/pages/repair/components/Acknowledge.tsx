@@ -3,6 +3,9 @@ import React, { useState } from "react";
 
 export default function ActionAlerts(): JSX.Element {
   const styles = {
+    AcknowlodgeBox: {
+      maxWidth: "md",
+    },
     ContentBox: {
       display: "flex",
       flexDirection: "column",
@@ -21,7 +24,7 @@ export default function ActionAlerts(): JSX.Element {
   const [open, setOpen] = useState(true);
 
   return (
-    <Container maxWidth="md">
+    <Container sx={styles.AcknowlodgeBox}>
       <Collapse in={open}>
         <Alert severity="info" onClose={(): void => setOpen(false)}>
           <AlertTitle>尊敬的用户您好，感谢您使用蓝盟的服务！请仔细阅读以下条款：</AlertTitle>
