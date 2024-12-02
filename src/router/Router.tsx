@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import RootPage from "../pages/root/Index";
 import AboutPage from "../pages/about/Index";
 import CheckPage from "../pages/check/Index";
