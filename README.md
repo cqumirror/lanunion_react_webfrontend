@@ -1,3 +1,6 @@
+# 蓝盟官网前端 - 测试版本
+使用 React18
+
 ## 代码提交说明
 写新代码前先`git pull`，然后`git checkout -b newBranchName`，在新分支里写代码
 写完提交到新分支然后pull request，请勿直接push到主分支
