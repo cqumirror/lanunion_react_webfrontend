@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import HeadBarNav from './HeadBarNav';
 import getCurrentUserInfo from '../content/getUserInfo/getCurrentUserInfo';
 import headBarNavList from './headBarNavList';
 import { Identity } from '../types';
-import { Box, useMediaQuery, useTheme } from '@mui/material';
+import { Box } from '@mui/material';
 import HeadBarNavMobile from './HeadBarNavMobile';
 import { desktop, mobile } from './Display/DisplayMode';
 
