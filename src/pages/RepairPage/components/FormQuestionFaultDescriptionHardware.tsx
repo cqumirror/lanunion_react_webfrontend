@@ -11,7 +11,6 @@ export default function FormQuestionFaultDescriptionHardware({ repairFormData, s
     setRepairFormData({ ...repairFormData, contactInfo: { ...repairFormData.contactInfo, campus: parseInt(event.target.value) } });
   };
   return (
-    
     <Box sx={{ display: "flex", gap: 2, alignItems: "center"}}>
       <FormControl fullWidth>
         <InputLabel id="canOpen">能开机</InputLabel>
@@ -39,10 +38,14 @@ export default function FormQuestionFaultDescriptionHardware({ repairFormData, s
           <MenuItem value={1}>否</MenuItem>
         </Select>
       </FormControl>
-      <TextField fullWidth id="outlined-basic" label="品牌" variant="outlined" />
-      <TextField fullWidth id="outlined-basic" label="型号" variant="outlined" />
-      <TextField fullWidth id="outlined-basic" label="购买时间" variant="outlined" />
-      <TextField fullWidth id="outlined-basic" label="详细描述" variant="outlined" />
+      <TextField multiline 
+          rows={4} fullWidth id="outlined-basic" label="品牌" variant="outlined" />
+      <TextField multiline 
+          rows={4} fullWidth id="outlined-basic" label="型号" variant="outlined" />
+      <TextField multiline 
+          rows={4} fullWidth id="outlined-basic" label="购买时间" variant="outlined" />
+      <TextField multiline 
+          rows={4} fullWidth id="outlined-basic" label="详细描述" variant="outlined" />
     </Box>
   )
 }

@@ -1,5 +1,7 @@
-import { Path } from "../types";
-import { Identity } from "../types";
+// TODO 后端自动处理
+
+import { Path } from "../../../types";
+import { Identity } from "../../../types";
 
 const headBarNavList : Path[] = [
   {

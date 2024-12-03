@@ -1,0 +1,8 @@
+export { default as AboutPage } from "./AboutPage"
+export { default as CheckPage } from "./CheckPage"
+export { default as ComplainPage } from "./ComplainPage"
+export { default as LankerPage } from "./LankerPage"
+export { default as NotFoundPage } from "./NotFoundPage"
+export { default as RepairPage } from "./RepairPage"
+export { default as RootPage } from "./RootPage"
+export { default as SuggestPage } from "./SuggestPage"

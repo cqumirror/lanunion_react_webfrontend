@@ -2,10 +2,10 @@
 import React from "react";
 import { Typography } from "@mui/material";
 
-export default function Index() {
+export default function LankerPage() {
   return (
     <Typography variant="h3" align="center" style={{ marginTop: 150 }}>
-      投诉蓝客
+      蓝客风采
     </Typography>
   );
 }

@@ -1,17 +1,9 @@
 import React from "react";
 import { Outlet, Route, Routes } from "react-router-dom";
-import RootPage from "../pages/root/Index";
-import AboutPage from "../pages/about/Index";
-import CheckPage from "../pages/check/Index";
-import ComplainPage from "../pages/complain/Index";
-import LankerPage from "../pages/lanker/Index";
-import SuggestPage from "../pages/suggest/Index";
-import RepairPage from "../pages/repair/Index";
-// import AdminPage from "../pages/admin/Index";
-import NotFoundPage from "../pages/404/Index";
-import HeadBar from "../components/HeadBar";
+import HeadBar from "../components/HeadBar/HeadBar";
 import { Box } from "@mui/material";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
+import { AboutPage, CheckPage, ComplainPage, LankerPage, NotFoundPage, RepairPage, RootPage, SuggestPage } from "../pages";
 
 export default function RouterList(): JSX.Element {
   return (

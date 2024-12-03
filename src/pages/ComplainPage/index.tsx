@@ -1,11 +1,11 @@
-// 首页
+// 404
 import React from "react";
 import { Typography } from "@mui/material";
 
-export default function Index() {
+export default function ComplainPage() {
   return (
     <Typography variant="h3" align="center" style={{ marginTop: 150 }}>
-      首页
+      投诉蓝客
     </Typography>
   );
 }
