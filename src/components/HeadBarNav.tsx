@@ -17,7 +17,6 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import ReactDOM from "react-dom/client";
 
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 
 export default function HeadBarNav({ navList, currentUserIdentity }: { navList: Path[]; currentUserIdentity: Identity[] }) {
     const navigate = useNavigate();
@@ -27,7 +26,6 @@ export default function HeadBarNav({ navList, currentUserIdentity }: { navList: 
     const handleClose = () => {
       navigate('true');
     };
-    const { Header, Footer, Sider, Content } = Layout;
     const result = navList
         .filter((nav) =>
             nav.canAccessIdentity
@@ -43,45 +41,9 @@ export default function HeadBarNav({ navList, currentUserIdentity }: { navList: 
               sx={{ my: 2, color: 'white', display: 'block' }}>{nav.name}
             </Button>
           ));
-        ReactDOM.render(
-          <div>
-            <layout>
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-               onClick={handleMenu}
-                color="inherit"
-              >
-              <AccountCircle />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(navigate)}
-              onClose={handleClose}
-            >
-              <MenuItem onClick={handleClose}>个人信息修改</MenuItem>
-              <MenuItem onClick={handleClose}>后台</MenuItem>
-              <MenuItem onClick={handleClose}>登出</MenuItem>
-            </Menu>
-            </layout>
-          </div>,
-          mountNode,
-        );
 
 
-
-    return result;
+    //return result;
 
     return (
 
@@ -118,5 +80,6 @@ export default function HeadBarNav({ navList, currentUserIdentity }: { navList: 
                         </Menu>
                     </div>
                   )}
-              </Toolbar>);}
+              </Toolbar>);
+    }
 
