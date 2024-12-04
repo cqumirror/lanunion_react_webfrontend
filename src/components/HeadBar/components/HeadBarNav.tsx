@@ -39,7 +39,7 @@ export function HeadBarNavMobile({ navList, currentUserIdentity }: { navList: Pa
       .map((nav, index) => (
         <ListItem key={index} onClick={() => navigate(nav.path)}>
           <ListItemButton>
-            <ListItemIcon>{nav.icon}</ListItemIcon>
+            <ListItemIcon sx={{ minWidth: "25px" }}>{nav.icon}</ListItemIcon>
             <ListItemText>{nav.name}</ListItemText>
           </ListItemButton>
         </ListItem>

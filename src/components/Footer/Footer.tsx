@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, Container, Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
 

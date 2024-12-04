@@ -1,5 +1,10 @@
 export { default as IconAbout } from "./implements/IconAbout";
+export { default as IconAngry } from "./implements/IconAngry";
+export { default as IconCalendarClock } from "./implements/IconCalendarClock"
 export { default as IconCircleUserRound } from "./implements/IconCircleUserRound";
 export { default as IconHouse } from "./implements/IconHouse"
+export { default as IconIdCard } from "./implements/IconIdCard"
 export { default as IconMenu } from "./implements/IconMenu"
+export { default as IconMessageSquareMore } from "./implements/IconMessageSquareMore"
+export { default as IconSquarePen } from "./implements/IconSquarePen"
 export { default as IconWrench } from "./implements/IconWrench"

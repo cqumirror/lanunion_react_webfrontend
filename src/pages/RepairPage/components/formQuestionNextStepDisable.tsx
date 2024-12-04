@@ -2,9 +2,9 @@ import { RepairFormData } from "./FormQuestions";
 
 export default function formQuestionNextStepDisable(repairFormData: RepairFormData, step: number) {
   switch (step) {
-    case 0:
-      return ![0, 1, 2].includes(repairFormData.faultDescription?.faultCategory ?? -1);
     case 1:
+      return ![0, 1, 2].includes(repairFormData.faultDescription?.faultCategory ?? -1);
+    case 2:
       switch (repairFormData.faultDescription?.faultCategory ?? -1) {
         case 0:
           return false;

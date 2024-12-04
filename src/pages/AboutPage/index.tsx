@@ -1,9 +1,9 @@
-/*****
+/*******
  * 关于我们
  */
 
 import { Container, Divider } from "@mui/material";
-import {Title, About, Service, Hints, Contact} from "./components";
+import { Title, About, Service, Hints, Contact } from "./components";
 
 export default function AboutPage(): JSX.Element {
   return (

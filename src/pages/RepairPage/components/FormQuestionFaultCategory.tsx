@@ -1,14 +1,12 @@
 import { FormControl, FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import React from "react";
-import { RepairFormData } from "./FormQuestions";
-export interface FormQuestionsfaultCategoryProps {
-  repairFormData: RepairFormData;
-  setRepairFormData: (repairFormData: RepairFormData) => void;
-}
-export default function FormQuestionsfaultCategory({ repairFormData, setRepairFormData, }: FormQuestionsfaultCategoryProps): JSX.Element {
+import { FormQuestionProps } from "./FormQuestions";
+
+export default function FormQuestionsfaultCategory({ repairFormData, setRepairFormData, }: FormQuestionProps): JSX.Element {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setRepairFormData({...repairFormData, faultDescription:{...repairFormData.faultDescription, faultCategory: parseInt(event.target.value)}});
+    setRepairFormData({ ...repairFormData, faultDescription: { ...repairFormData.faultDescription, faultCategory: parseInt(event.target.value) } });
   };
+
   return (
     <FormControl>
       <RadioGroup

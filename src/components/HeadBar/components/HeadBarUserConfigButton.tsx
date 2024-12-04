@@ -23,7 +23,7 @@ export function HeadBarUserConfigButton() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        <IconCircleUserRound color="white"/>
+        <IconCircleUserRound color="white" />
       </IconButton>
       <Menu
         id="basic-menu"

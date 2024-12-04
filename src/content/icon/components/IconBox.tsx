@@ -14,7 +14,7 @@ const styles = {
 export default function IconBox({ icon: Icon, props: IconBaseProps }: IconBoxProps) {
   return (
     <Box style={styles.IconBox}>
-      <Icon {...{ color: "black", ...IconBaseProps}} />
+      <Icon {...{ color: "black", ...IconBaseProps }} />
     </Box>
   );
 }

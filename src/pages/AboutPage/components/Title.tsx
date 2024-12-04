@@ -15,9 +15,9 @@ export function TitleDesktop(): JSX.Element {
   const styles = {
     TitleBox: {
       width: '100%',
-      display: "flex", // 使 Title 和 Subtitle 横向排列
-      justifyContent: "space-between", // Title 和 Subtitle 分别靠左和靠右
-      alignItems: "center", // 垂直居中对齐
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
       marginTop: "16px",
       marginBottom: "16px",
     },
@@ -27,8 +27,8 @@ export function TitleDesktop(): JSX.Element {
     },
     SubtitleBox: {
       display: "flex",
-      flexDirection: "column", // Subtitle 内部内容上下排列
-      alignItems: "flex-end", // Subtitle 对齐右边
+      flexDirection: "column",
+      alignItems: "flex-end",
     },
     Subtitle: {
       fontSize: "30px",
@@ -41,7 +41,7 @@ export function TitleDesktop(): JSX.Element {
   };
 
   return (
-    <Box sx={{...styles.TitleBox, display:desktop}}>
+    <Box sx={{ ...styles.TitleBox, display: desktop }}>
       <Box>
         <Typography sx={styles.Title}>
           重庆大学蓝盟
@@ -91,20 +91,20 @@ export function TitleMobile(): JSX.Element {
     },
   }
   return (
-    <Box sx={{...styles.TitleBox, display: mobile}}>
+    <Box sx={{ ...styles.TitleBox, display: mobile }}>
       <Box>
         <Typography sx={styles.Title}>
           重庆大学蓝盟
         </Typography>
         <Box sx={styles.SubtitleBox}>
-        <Typography sx={styles.Subtitle}>
-          我们是为重庆大学在校师生
-          <br />
-          <Typography component="span" sx={styles.Strong}>
-            免费修电脑
+          <Typography sx={styles.Subtitle}>
+            我们是为重庆大学在校师生
+            <br />
+            <Typography component="span" sx={styles.Strong}>
+              免费修电脑
+            </Typography>
+            的校级学生社团
           </Typography>
-          的校级学生社团
-        </Typography>
         </Box>
       </Box>
       <Box sx={{ clear: "both" }} />

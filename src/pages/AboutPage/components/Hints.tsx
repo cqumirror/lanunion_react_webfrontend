@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, List, ListItem } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 export default function Hints(): JSX.Element {
   const styles = {

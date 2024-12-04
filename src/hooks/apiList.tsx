@@ -2,7 +2,7 @@ import { AxiosResponse } from "axios";
 import instance from "./Api";
 import { ApiUserInfo } from "./apiTransformer";
 
-enum ApiPath{
+enum ApiPath {
   Articles = "/articles/",
   Articles_Id = "/articles/",
   Articles_Public = "/articles/public/",

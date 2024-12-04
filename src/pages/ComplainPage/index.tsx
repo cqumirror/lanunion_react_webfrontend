@@ -1,4 +1,7 @@
-// 404
+/*******
+ * 投诉蓝客
+ */
+
 import React from "react";
 import { Typography } from "@mui/material";
 

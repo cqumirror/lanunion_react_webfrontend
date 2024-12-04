@@ -1,10 +1,10 @@
 // TODO 后端自动处理
 
-import { IconAbout, IconHouse, IconWrench } from "../../../content/icon";
+import { IconAbout, IconAngry, IconHouse, IconIdCard, IconMessageSquareMore, IconCalendarClock, IconWrench } from "../../../content/icon";
 import { Path } from "../../../types";
 import { Identity } from "../../../types";
 
-const headBarNavList : Path[] = [
+const headBarNavList: Path[] = [
   {
     path: '/',
     name: '首页',
@@ -13,13 +13,13 @@ const headBarNavList : Path[] = [
   {
     path: '/about',
     name: '关于我们',
-    icon: <IconAbout />
+    icon: <IconAbout />,
   },
   {
     path: '/repair',
     name: '故障报修',
     canAccessIdentity: [Identity.USER],
-    icon: <IconWrench />
+    icon: <IconWrench />,
   },
   {
     path: '/repair',
@@ -45,18 +45,22 @@ const headBarNavList : Path[] = [
     path: '/check',
     name: '报修进展',
     canAccessIdentity: [Identity.USER],
+    icon: <IconCalendarClock />,
   },
   {
     path: '/lanke',
     name: '蓝客风采',
+    icon: <IconIdCard />,
   },
   {
     path: '/suggest',
     name: '意见建议',
+    icon: <IconMessageSquareMore />,
   },
   {
     path: '/complain',
     name: '投诉蓝客',
+    icon: <IconAngry />,
   },
 ]
 

@@ -28,6 +28,7 @@ export default function About(): JSX.Element {
       lineHeight: "1.8"
     },
   }
+  
   return (
     <Box>
       <Typography sx={styles.Heading}>

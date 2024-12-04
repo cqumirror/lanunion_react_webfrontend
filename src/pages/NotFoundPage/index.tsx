@@ -1,4 +1,7 @@
-// 404
+/*******
+ * 404
+ */
+
 import React from "react";
 import { Typography } from "@mui/material";
 
