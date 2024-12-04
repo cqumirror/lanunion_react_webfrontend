@@ -1,5 +1,6 @@
 // TODO 后端自动处理
 
+import { IconAbout, IconHouse, IconWrench } from "../../../content/icon";
 import { Path } from "../../../types";
 import { Identity } from "../../../types";
 
@@ -7,40 +8,43 @@ const headBarNavList : Path[] = [
   {
     path: '/',
     name: '首页',
+    icon: <IconHouse />,
   },
   {
     path: '/about',
     name: '关于我们',
+    icon: <IconAbout />
   },
   {
     path: '/repair',
     name: '故障报修',
-    canAccessIdentity: [Identity.USER]
+    canAccessIdentity: [Identity.USER],
+    icon: <IconWrench />
   },
   {
     path: '/repair',
     name: '接报修单',
-    canAccessIdentity: [Identity.LANKER, Identity.LANKER_ADMIN, Identity.SUPER_ADMIN, Identity.ROOT]
+    canAccessIdentity: [Identity.LANKER, Identity.LANKER_ADMIN, Identity.SUPER_ADMIN, Identity.ROOT],
   },
   {
     path: '/repair',
     name: '报单管理',
-    canAccessIdentity: [Identity.LANKER_ADMIN, Identity.SUPER_ADMIN, Identity.ROOT]
+    canAccessIdentity: [Identity.LANKER_ADMIN, Identity.SUPER_ADMIN, Identity.ROOT],
   },
   {
     path: '/repair',
     name: '用户管理',
-    canAccessIdentity: [Identity.LANKER_ADMIN, Identity.SUPER_ADMIN, Identity.ROOT]
+    canAccessIdentity: [Identity.LANKER_ADMIN, Identity.SUPER_ADMIN, Identity.ROOT],
   },
   {
     path: '/repair',
     name: '蓝客管理',
-    canAccessIdentity: [Identity.SUPER_ADMIN, Identity.ROOT]
+    canAccessIdentity: [Identity.SUPER_ADMIN, Identity.ROOT],
   },
   {
     path: '/check',
     name: '报修进展',
-    canAccessIdentity: [Identity.USER]
+    canAccessIdentity: [Identity.USER],
   },
   {
     path: '/lanke',

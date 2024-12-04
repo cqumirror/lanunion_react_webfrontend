@@ -20,6 +20,7 @@ export interface Path {
   path: string;
   name: string;
   canAccessIdentity?: string[];
+  icon?: JSX.Element;
 }
 
 export interface GlobalContextProps {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Identity, Path } from "../../../types";
-import { Button, Drawer, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import { Button, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import IconButton from '@mui/material/IconButton';
 import ReactDOM from "react-dom/client";
@@ -38,7 +38,10 @@ export function HeadBarNavMobile({ navList, currentUserIdentity }: { navList: Pa
       )
       .map((nav, index) => (
         <ListItem key={index} onClick={() => navigate(nav.path)}>
-          <ListItemButton><ListItemText>{nav.name}</ListItemText></ListItemButton>
+          <ListItemButton>
+            <ListItemIcon>{nav.icon}</ListItemIcon>
+            <ListItemText>{nav.name}</ListItemText>
+          </ListItemButton>
         </ListItem>
       ));
   }
