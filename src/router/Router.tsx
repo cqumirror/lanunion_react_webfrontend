@@ -8,7 +8,7 @@ import { AboutPage, CheckPage, ComplainPage, LankerPage, NotFoundPage, RepairPag
 export default function RouterList(): JSX.Element {
   return (
     <Routes>
-      <Route element={<><HeadBar/><Box sx={{ paddingTop: "80px" }}><Outlet /></Box><Footer /></>}>
+      <Route element={<><HeadBar/><Box sx={{ paddingTop: "70px", paddingBottom: "80px" }}><Outlet /></Box><Footer /></>}>
         <Route path='/' element={<RootPage />} />
         <Route path='about' element={<AboutPage/>} />
         <Route path='check' element={<CheckPage />} />

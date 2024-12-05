@@ -1,7 +1,7 @@
 import { Collapse, Container, Alert, AlertTitle, Typography, Box } from "@mui/material";
 import React, { useState } from "react";
 
-export default function ActionAlerts(): JSX.Element {
+export default function Acknowledge(): JSX.Element {
   const styles = {
     acknowlodgeBox: {
       maxWidth: "md",

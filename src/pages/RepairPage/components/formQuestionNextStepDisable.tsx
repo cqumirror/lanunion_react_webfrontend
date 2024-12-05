@@ -1,4 +1,4 @@
-import { RepairFormData } from "./FormQuestions";
+import { RepairFormData } from "./RepairForm";
 
 export default function formQuestionNextStepDisable(repairFormData: RepairFormData, step: number) {
   switch (step) {

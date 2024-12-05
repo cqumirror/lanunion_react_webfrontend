@@ -44,7 +44,7 @@ function HeadBar(): JSX.Element {
           <Box sx={{ display: mobile, justifyContent: 'center', flexGrow: 1 }}>
             <HeadBarLogo />
           </Box>
-          <Box sx={{ justifyContent: 'flex-start', flexGrow: 0, position: 'absolute', right: '20px' }}>
+          <Box sx={{ justifyContent: 'flex-start', flexGrow: 0, position: 'absolute', right: '0px' }}>
             <HeadBarUserConfigButton />
           </Box>
         </Toolbar>
