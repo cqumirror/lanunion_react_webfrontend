@@ -16,10 +16,12 @@ export interface RepairFormData {
     isNoteBook?: boolean;
     brand?: string;
     model?: string;
-    timeBrought?: number;
+    timeBrought?: string;
     os?: number;
     osVersion?: number;
+    osBitNumber?:number;
     detail?: string;
+    isApple?: boolean;
   };
   contactInfo?: {
     campus?: number;

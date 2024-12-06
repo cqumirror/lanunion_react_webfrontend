@@ -11,7 +11,7 @@ export default function FormSteps({ activeStep, steps }: FormStepsProps) {
     <>
       <Typography>{steps[activeStep].description}</Typography>
       <Box sx={{
-        minHeight: "350px",
+        minHeight: "380px",
         paddingTop: "20px",
         display: "flex", 
         flexDirection: "column",

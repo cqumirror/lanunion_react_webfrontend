@@ -7,7 +7,7 @@ export default function formQuestionNextStepDisable(repairFormData: RepairFormDa
     case 2:
       switch (repairFormData.faultDescription?.faultCategory ?? -1) {
         case 0:
-          return false;
+          return repairFormData.faultDescription?.isApple;
         case 1:
           return false;
         case 2:
