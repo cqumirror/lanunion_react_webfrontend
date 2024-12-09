@@ -1,22 +1,42 @@
-import { Box, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, TextField } from "@mui/material";
 import React from "react";
-import { FormQuestionProps } from "../RepairForm";
+import { Box, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, TextField } from "@mui/material";
+import { FormQuestionProps } from "../interfaces";
 
 export default function ContactInfo({ repairFormData, setRepairFormData }: FormQuestionProps): JSX.Element {
+
+  const styles = {
+    ContactInfoBox: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 2,
+      width: "80%",
+    },
+    ContactInfoFirstLineBox: {
+      display: "flex",
+      gap: 2,
+      alignItems: "center"
+    },
+    ContactInfoCampusFormControl: {
+      maxWidth: "85pt",
+    },
+  }
+
   const handleCampusChange = (event: SelectChangeEvent) => {
     setRepairFormData({ ...repairFormData, contactInfo: { ...repairFormData.contactInfo, campus: parseInt(event.target.value) } });
   };
+
   const handleAddrChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setRepairFormData({ ...repairFormData, faultDescription: { ...repairFormData.faultDescription, detail: event.target.value } });
+    setRepairFormData({ ...repairFormData, contactInfo: { ...repairFormData.contactInfo, addr: event.target.value } });
   };
+
   const handleCustomInfoChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setRepairFormData({ ...repairFormData, faultDescription: { ...repairFormData.faultDescription, detail: event.target.value } });
+    setRepairFormData({ ...repairFormData, contactInfo: { ...repairFormData.contactInfo, customInfo: event.target.value } });
   };
 
   return (
-    <Box sx={{ display: "flex", flexDirection: "column", gap: 2, width: "80%" }}>
-      <Box sx={{ display: "flex", gap: 2, alignItems: "center" }}>
-        <FormControl fullWidth sx={{ maxWidth: "100pt" }}>
+    <Box sx={styles.ContactInfoBox}>
+      <Box sx={styles.ContactInfoFirstLineBox}>
+        <FormControl fullWidth sx={styles.ContactInfoCampusFormControl}>
           <InputLabel>校区</InputLabel>
           <Select
             value={String(repairFormData.contactInfo?.campus)}

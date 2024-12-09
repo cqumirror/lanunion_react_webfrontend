@@ -1,6 +1,6 @@
 import { Box, Button } from "@mui/material";
 import formQuestionNextStepDisable from "./formQuestionNextStepDisable";
-import { FormStep, RepairFormData } from "./RepairForm";
+import { FormStep, RepairFormData } from "./interfaces";
 
 export interface FormControlButtonsProps {
   activeStep: number,
@@ -11,8 +11,19 @@ export interface FormControlButtonsProps {
 }
 
 export default function FormControlButtons({ activeStep, steps, repairFormData, handleBack, handleNext }: FormControlButtonsProps) {
+  const styles = {
+    FormControlButtonsBox: {
+      display: 'flex',
+      flexDirection: 'row',
+      paddingTop: 2,
+    },
+    FormControlButtonsMidBox: {
+      flex: '1 1 auto',
+    },
+  }
+
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'row', paddingTop: 2 }}>
+    <Box sx={styles.FormControlButtonsBox}>
       <Button
         color="inherit"
         disabled={activeStep === 0}
@@ -21,7 +32,7 @@ export default function FormControlButtons({ activeStep, steps, repairFormData, 
       >
         上一步
       </Button>
-      <Box sx={{ flex: '1 1 auto' }} />
+      <Box sx={styles.FormControlButtonsMidBox} />
       <Button
         variant="contained"
         disabled={formQuestionNextStepDisable(repairFormData, activeStep)}

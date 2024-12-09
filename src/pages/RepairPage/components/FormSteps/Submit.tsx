@@ -12,7 +12,7 @@ export default function Submit({ handleReset }: SubmitProps) {
       alignItems: "center",
     }
   }
-
+  // TODO 连接后端
   return (
     <Box sx={styles.formQuestionSubmitBox}>
       <Typography>提交成功，您可以稍后在「报修进展」处查询您的报修单</Typography>

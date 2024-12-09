@@ -1,5 +1,5 @@
 import { Step, StepLabel, Stepper } from "@mui/material";
-import { FormStep } from "./RepairForm";
+import { FormStep } from "./interfaces";
 import { desktop, mobile } from "../../../components/Display/DisplayMode";
 
 export interface FormStepperProps {

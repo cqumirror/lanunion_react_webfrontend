@@ -1,7 +1,6 @@
 import React from "react";
-import { Box } from "@mui/material";
-import { FormQuestionProps } from "../RepairForm";
 import { FaultDescriptionHardware, FaultDescriptionCampusNetwork, FaultDescriptionSoftware } from "./index";
+import { FormQuestionProps } from "../interfaces";
 
 export default function FaultCategory({ repairFormData, setRepairFormData, }: FormQuestionProps): JSX.Element {
   const renderDescriptionComponent = () => {

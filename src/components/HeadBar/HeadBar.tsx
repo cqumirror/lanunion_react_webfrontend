@@ -3,12 +3,13 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import getCurrentUserInfo from '../../content/getUserInfo/getCurrentUserInfo';
-import headBarNavList from './components/headBarNavList';
+import headBarButtonNavList from './components/headBarButtonNavList';
+import headBarUserConfigButtonNavList from './components/headBarUserConfigButtonNavList';
 import { Identity } from '../../types';
 import { Box } from '@mui/material';
 import { desktop, mobile } from '../Display/DisplayMode';
 import { HeadBarUserConfigButton } from './components/HeadBarUserConfigButton';
-import { HeadBarNavDesktop, HeadBarNavMobile } from './components/HeadBarNav';
+import { HeadBarNavDesktop, HeadBarNavMobile } from './components/HeadBarButton';
 import { HeadBarLogo } from './components/HeadBarLogo';
 
 const settings = ['设置', '后台', '登出'];
@@ -35,17 +36,17 @@ function HeadBar(): JSX.Element {
             <HeadBarLogo />
           </Box>
           <Box sx={{ display: desktop, justifyContent: 'center', flexGrow: 1 }}>
-            {HeadBarNavDesktop({ navList: headBarNavList, currentUserIdentity: [Identity.USER] })}
+            {HeadBarNavDesktop({ navList: headBarButtonNavList, currentUserIdentity: [Identity.USER] })}
           </Box>
           {/* 移动端 */}
           <Box sx={{ display: mobile, justifyContent: 'flex-start', flexGrow: 0, position: 'absolute', left: '0px' }}>
-            {HeadBarNavMobile({ navList: headBarNavList, currentUserIdentity: [Identity.USER] })}
+            {HeadBarNavMobile({ navList: headBarButtonNavList, currentUserIdentity: [Identity.USER] })}
           </Box>
           <Box sx={{ display: mobile, justifyContent: 'center', flexGrow: 1 }}>
             <HeadBarLogo />
           </Box>
           <Box sx={{ justifyContent: 'flex-start', flexGrow: 0, position: 'absolute', right: '0px' }}>
-            <HeadBarUserConfigButton />
+            {HeadBarUserConfigButton({ navList: headBarUserConfigButtonNavList, currentUserIdentity: [Identity.USER] })}
           </Box>
         </Toolbar>
       </Container>

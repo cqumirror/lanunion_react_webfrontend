@@ -1,46 +1,11 @@
 import React from 'react';
-import { Box, Typography, Container, } from '@mui/material';
-import FaultCategory from './FormSteps/FaultCategory';
-import FaultDescription from './FormSteps/FaultDescription';
-import ContactInfo from './FormSteps/ContactInfo';
-import Submit from './FormSteps/Submit';
-import FormQuestionAcknowledge from './FormSteps/Acknowledge';
+import { Container } from '@mui/material';
 import FormStepper from './FormStepper';
 import FormControlButtons from './FormControlButtons';
-import FormSteps from './FormSteps';
-
-export interface RepairFormData {
-  faultDescription?: {
-    faultCategory?: number;
-    canBootUp?: boolean;
-    isNoteBook?: boolean;
-    brand?: string;
-    model?: string;
-    timeBrought?: string;
-    os?: number;
-    osVersion?: number;
-    osBitNumber?:number;
-    detail?: string;
-    isApple?: boolean;
-  };
-  contactInfo?: {
-    campus?: number;
-    addr?: string;
-    customInfo?: string;
-  };
-}
-
-export interface FormStep {
-  stepName: string,
-  stepIndex: number,
-  form: JSX.Element,
-  description: string
-}
-
-export interface FormQuestionProps {
-  repairFormData: RepairFormData;
-  setRepairFormData: (repairFormData: RepairFormData) => void;
-}
+import FormStepBody from './FormStepBody';
+import { RepairFormData } from './interfaces';
+import { Acknowledge, ContactInfo, FaultCategory, FaultDescription } from './FormSteps';
+import Submit from './FormSteps/Submit';
 
 export default function FormQuestions() {
 
@@ -64,7 +29,7 @@ export default function FormQuestions() {
     {
       stepName: '请您知悉',
       stepIndex: 0,
-      form: <FormQuestionAcknowledge />,
+      form: <Acknowledge />,
       description: '我们认为您需要知晓以下信息',
     },
     {
@@ -97,7 +62,7 @@ export default function FormQuestions() {
     <Container sx={{ maxWidth: "md", alignItems: "center", marginTop: 5 }}>
       <FormStepper activeStep={activeStep} steps={steps} />
       <Container maxWidth="md" sx={{ marginTop: 5 }}>
-        <FormSteps activeStep={activeStep} steps={steps} />
+        <FormStepBody activeStep={activeStep} steps={steps} />
         <FormControlButtons activeStep={activeStep} steps={steps} repairFormData={repairFormData} handleBack={handleBack} handleNext={handleNext} />
       </Container>
     </Container>
