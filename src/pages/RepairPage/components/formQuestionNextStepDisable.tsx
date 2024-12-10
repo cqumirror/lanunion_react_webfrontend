@@ -16,16 +16,16 @@ export default function formQuestionNextStepDisable(repairFormData: RepairFormDa
             ![undefined, ""].includes(repairFormData.faultDescription?.brandHardware) &&
             ![undefined, ""].includes(repairFormData.faultDescription?.modelHardware) &&
             ![undefined, ""].includes(repairFormData.faultDescription?.timeBroughtHardware) &&
-            ![undefined, ""].includes(repairFormData.faultDescription?.detailHardware) !== undefined
+            ![undefined, ""].includes(repairFormData.faultDescription?.detailHardware)
           );
         case 1:
           return !(
             repairFormData.faultDescription?.os !== undefined &&
             repairFormData.faultDescription?.osBitNumber !== undefined &&
-            ![undefined, ""].includes(repairFormData.faultDescription?.brandSoftware) !== undefined &&
-            ![undefined, ""].includes(repairFormData.faultDescription?.modelSoftware) !== undefined &&
-            ![undefined, ""].includes(repairFormData.faultDescription?.timeBroughtSoftware) !== undefined &&
-            ![undefined, ""].includes(repairFormData.faultDescription?.detailSoftware) !== undefined
+            ![undefined, ""].includes(repairFormData.faultDescription?.brandSoftware) &&
+            ![undefined, ""].includes(repairFormData.faultDescription?.modelSoftware) &&
+            ![undefined, ""].includes(repairFormData.faultDescription?.timeBroughtSoftware) &&
+            ![undefined, ""].includes(repairFormData.faultDescription?.detailSoftware)
           );
         case 2:
           return true;
